@@ -7,15 +7,13 @@
  * Time: 11:06
  */
 
-require_once('web.php');
-
 ?>
 
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title><?php echo title ?></title>
+    <title><?php echo TITLE ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -26,17 +24,17 @@ require_once('web.php');
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.php"><?php echo title ?></a>
+                <a class="navbar-brand" href="home"><?php echo TITLE ?></a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Over ons</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="about">Over ons</a></li>
+                <li><a href="contact">Contact</a></li>
             </ul>
         </div>
     </nav>
-
-    <?php echo $controller->index() ?>
-
+        <?php
+            include($controller->index());
+        ?>
     <div class="footer">
         <hr>
     </div>

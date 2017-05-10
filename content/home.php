@@ -11,6 +11,12 @@
 
 <div class="container">
     <div class="row">
-        <h1>fghjkl</h1>
+        <div class="col-sm-12">
+            <h1>Home</h1>
+            <?php
+                $table = new table(['th' => ['1', '2']],['td' => ['3', '4']]);
+                echo $table->Read();
+            ?>
+        </div>
     </div>
 </div>

@@ -7,10 +7,11 @@
  * Time: 11:29
  */
 
-define('title', 'Webshop');
+define('TITLE', 'Webshop');
 
-define('db_host', '127.0.0.1');
-define('db_port', 3306);
-define('db_database', 'webshop');
-define('db_user', 'root');
-define('db_pass', '');
+define('DB_CONNECTION', 'mysql');
+define('DB_HOST', '127.0.0.1');
+define('DB_PORT', 3306);
+define('DB_DATABASE', 'webshop');
+define('DB_USER', 'root');
+define('DB_PASS', 'geheim');

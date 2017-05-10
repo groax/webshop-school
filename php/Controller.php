@@ -9,7 +9,18 @@
 
 class Controller {
 
+    public $page;
+
+    function __construct($page) {
+        $this->page = $page;
+    }
+
     public function index() {
-        return file_get_contents('content/home.php');
+        $view = fopen($this->page, 'r');
+        if($view === FALSE) {
+            $view = fopen('content/404.php', 'r');
+        }
+//        $file = fread($view, filesize($this->page));
+        return $this->page;
     }
 }
